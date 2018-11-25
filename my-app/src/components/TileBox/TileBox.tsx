@@ -1,5 +1,5 @@
 import Octicon, { ChevronDown, ChevronUp } from '@githubprimer/octicons-react';
-import { BorderBox, Box, Button, Flex } from '@primer/components';
+import { BorderBox, Box, Flex } from '@primer/components';
 import 'primer-box/index.scss';
 import * as React from 'react';
 import './TileBox.css';
@@ -7,11 +7,6 @@ import './TileBox.css';
 interface ITileBoxProps {
   name: string;
 }
-/*
-interface IButtonProps {
-  open: string;
-  toggle: string;
-}*/
 
 interface ITileBoxState {
   isOpen: boolean;
@@ -37,14 +32,14 @@ class TileBox extends React.Component<ITileBoxProps, ITileBoxState> {
   public render() {
     return (
       <React.Fragment>
-        <BorderBox ml="3" mr="3">
+        <BorderBox m="3">
           <Box is="div" width="100%">
             <div className="Box-header">
               <Flex justifyContent="space-between">
                 <h3 className="Box-title">Box title</h3>
-                <Button is="summary" onClick={this.toggle}>
+                <div onClick={this.toggle} className="Box-summary">
                   <Octicon icon={this.state.isOpen ? ChevronUp : ChevronDown} />
-                </Button>
+                </div>
               </Flex>
             </div>
           </Box>
