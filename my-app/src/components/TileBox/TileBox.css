@@ -1,1 +1,8 @@
 /*@import 'primer-box/index.scss';*/
+.Box-body {
+  display: block;
+}
+
+.Box-body_isHidden {
+  display: none;
+}
