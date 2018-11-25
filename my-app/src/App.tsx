@@ -2,6 +2,7 @@ import * as React from 'react';
 import './App.css';
 
 import Header from './components/Header/Header';
+import TileBox from './components/TileBox/TileBox';
 import logo from './logo.svg';
 
 class App extends React.Component {
@@ -9,6 +10,7 @@ class App extends React.Component {
     return (
       <React.Fragment>
         <Header />
+        <TileBox name="TextForName" />
         <div className="App">
           <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />

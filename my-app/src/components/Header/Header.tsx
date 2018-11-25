@@ -1,10 +1,10 @@
-import { Heading, Text } from '@primer/components';
+import { Heading, Sticky, Text } from '@primer/components';
 import * as React from 'react';
 import './Header.css';
 
 const Header: React.SFC = props => {
   return (
-    <React.Fragment>
+    <Sticky>
       <div className="Header">
         <Heading fontSize={5} pt={3} pl={3} className="Header-h1">
           Harry report
@@ -12,7 +12,7 @@ const Header: React.SFC = props => {
       </div>
       <div className="Header-TestInfo">
         <p className="Header-Detail">
-          <Text is="span" pl="3" className="Header-TestName_color_black">
+          <Text is="span" pl="3" fontWeight="bold" className="Header-TestName_color_black">
             Total Tests:
           </Text>
           <Text is="span" pl="1" className="Header-TestValue_color_black">
@@ -20,7 +20,7 @@ const Header: React.SFC = props => {
           </Text>
         </p>
         <p className="Header-Detail">
-          <Text is="span" color="green.6" pl="3" className="Header-TestName_color_green">
+          <Text is="span" color="green.6" pl="3" fontWeight="bold" className="Header-TestName_color_green">
             Passed:
           </Text>
           <Text is="span" color="green.6" pl="1" className="Header-TestValue_color_green">
@@ -28,7 +28,7 @@ const Header: React.SFC = props => {
           </Text>
         </p>
         <p className="Header-Detail">
-          <Text is="span" color="red.6" pl="3" className="Header-TestName_color_red">
+          <Text is="span" color="red.6" pl="3" fontWeight="bold" className="Header-TestName_color_red">
             Failed:
           </Text>
           <Text is="span" color="red.6" pl="1" className="Header-TestValue_color_red">
@@ -36,7 +36,7 @@ const Header: React.SFC = props => {
           </Text>
         </p>
         <p className="Header-Detail">
-          <Text is="span" color="grey.6" pl="3" className="Header-TestName_color_grey">
+          <Text is="span" color="grey.6" pl="3" fontWeight="bold" className="Header-TestName_color_grey">
             Skipped:
           </Text>
           <Text is="span" color="grey.6" pl="1" className="Header-TestValue_color_grey">
@@ -44,7 +44,7 @@ const Header: React.SFC = props => {
           </Text>
         </p>
         <p className="Header-Detail">
-          <Text is="span" color="yellow.6" pl="3" className="Header-TestName_color_yellow">
+          <Text is="span" color="yellow.6" pl="3" fontWeight="bold" className="Header-TestName_color_yellow">
             Retries:
           </Text>
           <Text is="span" color="yellow.6" pl="1" className="Header-TestValue_color_yellow">
@@ -52,7 +52,7 @@ const Header: React.SFC = props => {
           </Text>
         </p>
       </div>
-    </React.Fragment>
+    </Sticky>
   );
 };
 export default Header;
